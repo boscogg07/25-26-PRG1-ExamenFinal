@@ -4,14 +4,12 @@ public class JuegoAdivinanza {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Juego de Adivinanza - Adivina el Numero Secreto");
-        
         int minN = 1;
         int maxN = 100;
         int maxI = 10; // Max intentos
-        
-        int d = SeleccionDificultad(sc);
 
+        EmpezarJuego();
+        int d = SeleccionDificultad(sc);
         if (d == 1) {
             maxN = 50;
             maxI = 10;
@@ -139,10 +137,10 @@ public class JuegoAdivinanza {
         if (idx == 0) {
             System.out.println("(No hubo intentos)");
         }
+    }
 
-        System.out.println(); // espacio
-        System.out.println("Fin del juego");
-        sc.close();
+    public static void EmpezarJuego(){
+        System.out.println("Juego de Adivinanza - Adivina el Numero Secreto");
     }
     public static int SeleccionDificultad(Scanner sc) {
         System.out.println(); // espacio
@@ -154,3 +152,5 @@ public class JuegoAdivinanza {
         return sc.nextInt();
     }
 }
+    
+
