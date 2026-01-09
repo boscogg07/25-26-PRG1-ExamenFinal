@@ -10,17 +10,22 @@ public class JuegoAdivinanza {
 
         EmpezarJuego();
         int d = SeleccionDificultad(sc);
-        if (d == 1) {
-            maxN = 50;
-            maxI = 10;
-        } else if (d == 2) {
-            maxN = 100;
-            maxI = 7;
-        } else if (d == 3) {
-            maxN = 200;
-            maxI = 8;
-        } else {
-            System.out.println("Opcion no valida, usando dificultad Normal.");
+        switch (d) {
+            case 1:
+                maxN = 50;
+                maxI = 10;
+                break;
+            case 2:
+                maxN = 100;
+                maxI = 7;
+                break;
+            case 3:
+                maxN = 200;
+                maxI = 8;
+                break;
+            default:
+                System.out.println("Opcion no valida, usando dificultad Normal.");
+                break;
         }
 
         System.out.println(); // espacio
