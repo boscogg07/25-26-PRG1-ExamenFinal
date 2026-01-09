@@ -9,14 +9,8 @@ public class JuegoAdivinanza {
         int minN = 1;
         int maxN = 100;
         int maxI = 10; // Max intentos
-
-        System.out.println(); // espacio
-        System.out.println("Selecciona Dificultad:");
-        System.out.println("1. Facil (1-50, 10 intentos)");
-        System.out.println("2. Normal (1-100, 7 intentos)");
-        System.out.println("3. Dificil (1-200, 8 intentos)");
-        System.out.print("Opcion: ");
-        int d = sc.nextInt();
+        
+        int d = SeleccionDificultad(sc);
 
         if (d == 1) {
             maxN = 50;
@@ -149,5 +143,14 @@ public class JuegoAdivinanza {
         System.out.println(); // espacio
         System.out.println("Fin del juego");
         sc.close();
+    }
+    public static int SeleccionDificultad(Scanner sc) {
+        System.out.println(); // espacio
+        System.out.println("Selecciona Dificultad:");
+        System.out.println("1. Facil (1-50, 10 intentos)");
+        System.out.println("2. Normal (1-100, 7 intentos)");
+        System.out.println("3. Dificil (1-200, 8 intentos)");
+        System.out.print("Opcion: ");
+        return sc.nextInt();
     }
 }
