@@ -36,15 +36,19 @@ public class SistemaReservas {
         System.out.print("Tipo de habitación (1=Individual, 2=Doble, 3=Suite): ");
         int t = sc.nextInt();
         double pb = 0;
-        if (t == 1) {
-            pb = 50;
-        } else if (t == 2) {
-            pb = 80;
-        } else if (t == 3) {
-            pb = 150;
-        } else {
-            System.out.println("Tipo de habitación inválido");
-            return;
+        switch (t) {
+            case 1:
+                pb = 50;
+                break;
+            case 2:
+                pb = 80;
+                break;
+            case 3:
+                pb = 150;
+                break;
+            default:
+                System.out.println("Tipo de habitación inválido");
+                return;
         }
         System.out.print("Número de noches: ");
         int no = sc.nextInt();
@@ -88,12 +92,19 @@ public class SistemaReservas {
         System.out.println("DNI: " + d);
         System.out.println("Email: " + e);
         String th = "";
-        if (t == 1) {
-            th = "Individual";
-        } else if (t == 2) {
-            th = "Doble";
-        } else {
-            th = "Suite";
+        switch (t) {
+            case 1:
+                th = "Individual";
+                break;
+            case 2:
+                th = "Doble";
+                break;
+            case 3:
+                th = "Suite";
+                break;
+            default:
+                th = "Desconocido";
+                break;
         }
         System.out.println("Tipo: " + th);
         System.out.println("Noches: " + no);
